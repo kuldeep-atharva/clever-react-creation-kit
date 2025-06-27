@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 interface Destination {
   id: number;
@@ -11,6 +12,8 @@ interface Destination {
   image: string;
   description: string;
   category: string;
+  readURL: string;
+  bookURL: string;
 }
 
 interface DestinationCardProps {
@@ -18,6 +21,7 @@ interface DestinationCardProps {
 }
 
 const DestinationCard = ({ destination }: DestinationCardProps) => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="relative">
@@ -53,11 +57,13 @@ const DestinationCard = ({ destination }: DestinationCardProps) => {
               variant="outline" 
               size="sm" 
               className="flex-1 text-sm"
+              onClick={() => window.open(destination.readURL)}
             >
               Read full review
             </Button>
             <Button 
               className="flex-1 bg-gray-900 hover:bg-gray-800 text-white text-sm"
+              onClick={() => window.open(destination.bookURL)}
             >
               Visit & book
             </Button>
