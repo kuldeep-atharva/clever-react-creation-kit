@@ -32,7 +32,7 @@ const destinations = [
     type: 'Farmhouse',
     priceRange: '€195-€300',
     image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'Here, hospitality isn't a service — it's a way of life passed down through generations.',
+    description: 'Here, hospitality isn\'t a service — it\'s a way of life passed down through generations.',
     category: 'Pastoral Retreat'
   }
 ];
