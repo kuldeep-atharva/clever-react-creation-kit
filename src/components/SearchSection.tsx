@@ -17,15 +17,17 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">WHERE</label>
+    <div className="bg-white rounded-2xl shadow-2xl border border-stone-200/50 p-8 max-w-5xl mx-auto backdrop-blur-sm">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+        <div className="space-y-3">
+          <label className="block text-sm font-medium text-stone-700 mb-2 tracking-wide uppercase text-xs">
+            WHERE
+          </label>
           <Select value={location} onValueChange={setLocation}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any region" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any region">Any region</SelectItem>
               <SelectItem value="Portugal">Portugal</SelectItem>
               <SelectItem value="Ireland">Ireland</SelectItem>
@@ -35,13 +37,15 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
           </Select>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">TYPE</label>
+        <div className="space-y-3">
+          <label className="block text-sm font-medium text-stone-700 mb-2 tracking-wide uppercase text-xs">
+            TYPE
+          </label>
           <Select value={type} onValueChange={setType}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any type" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any type">Any type</SelectItem>
               <SelectItem value="Boutique Hotel">Boutique Hotel</SelectItem>
               <SelectItem value="Design Hotel">Design Hotel</SelectItem>
@@ -51,13 +55,15 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
           </Select>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">BUDGET</label>
+        <div className="space-y-3">
+          <label className="block text-sm font-medium text-stone-700 mb-2 tracking-wide uppercase text-xs">
+            BUDGET
+          </label>
           <Select value={budget} onValueChange={setBudget}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any price" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any price">Any price</SelectItem>
               <SelectItem value="€0-€200">€0-€200</SelectItem>
               <SelectItem value="€200-€400">€200-€400</SelectItem>
@@ -68,7 +74,7 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
 
         <Button 
           onClick={handleSearch}
-          className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-2 rounded-md transition-colors"
+          className="bg-stone-900 hover:bg-stone-800 text-white px-8 py-3 h-12 rounded-xl transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
         >
           Find stays
         </Button>
