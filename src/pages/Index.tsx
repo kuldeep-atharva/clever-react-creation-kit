@@ -180,26 +180,26 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* <Header /> */}
-
+    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-white to-stone-100">
       {/* Hero Section */}
-      <div className="bg-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-gray-900 mb-4 leading-tight">
-            Quiet places.
-          </h1>
-          <h2 className="text-4xl md:text-5xl font-serif text-gray-700 mb-8">
-            Trusted voices.
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-gray-600 mb-2">
-              Carefully selected stays from the world's most respected travel
-              writers.
+      <div className="relative bg-white py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-50/30 to-transparent"></div>
+        <div className="relative max-w-5xl mx-auto text-center">
+          <div className="mb-8">
+            <h1 className="text-6xl md:text-7xl font-serif text-stone-800 mb-4 leading-tight tracking-tight">
+              Quiet places.
+            </h1>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-600 mb-12 font-light">
+              Trusted voices.
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto mb-16">
+            <p className="text-lg text-stone-700 mb-3 font-light leading-relaxed">
+              Carefully selected stays from the world's most respected travel writers.
             </p>
-            <p className="text-gray-600 mb-12">
-              No algorithms. No sponsored content. Just authentic
-              recommendations.
+            <p className="text-lg text-stone-600 font-light leading-relaxed">
+              No algorithms. No sponsored content. Just authentic recommendations.
             </p>
           </div>
 
@@ -208,13 +208,13 @@ const Index = () => {
       </div>
 
       {/* Destinations Section */}
-      <div className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-serif text-gray-900 mb-2">
+      <div className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-serif text-stone-800 mb-4 font-semibold">
               All quiet finds
             </h3>
-            <p className="text-gray-600">
+            <p className="text-stone-600 text-lg font-light">
               {filteredDestinations.length} carefully curated stays
             </p>
           </div>

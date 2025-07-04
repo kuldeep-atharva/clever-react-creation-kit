@@ -51,10 +51,10 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
             WHERE
           </label>
           <Select value={location} onValueChange={setLocation}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any region" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any region">Any region</SelectItem>
               {/* {fetchFilterData.map((type, index) => {
                 if (type.region) {
@@ -96,10 +96,10 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
             TYPE
           </label>
           <Select value={type} onValueChange={setType}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any type" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any type">Any type</SelectItem>
               {/* {fetchFilterData.map((type, index) => {
                 return (
@@ -135,10 +135,10 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
             BUDGET
           </label>
           <Select value={budget} onValueChange={setBudget}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full h-12 border-stone-200 focus:border-stone-400 focus:ring-stone-400/20">
               <SelectValue placeholder="Any price" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white border-stone-200">
               <SelectItem value="Any price">Any price</SelectItem>
               {/* {fetchFilterData.map((type, index) => {
                 if (type.price_range) {
@@ -158,7 +158,7 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
 
         <Button
           onClick={handleSearch}
-          className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-2 rounded-md transition-colors"
+          className="bg-stone-900 hover:bg-stone-800 text-white px-8 py-3 h-12 rounded-xl transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
         >
           Find stays
         </Button>
