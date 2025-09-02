@@ -78,11 +78,11 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
               })} */}
               {[
                 ...new Set(
-                  fetchFilterData.map((item) => item.location?.trim())
+                  fetchFilterData?.map((item) => item.location?.trim())
                 ),
               ]
                 .filter(Boolean)
-                .map((location, index) => (
+                ?.map((location, index) => (
                   <SelectItem key={index} value={location}>
                     {location.charAt(0).toUpperCase() + location.slice(1)}
                   </SelectItem>
@@ -117,11 +117,11 @@ const SearchSection = ({ onSearch }: SearchSectionProps) => {
               })} */}
               {[
                 ...new Set(
-                  fetchFilterData.map((item) => item.type?.trim())
+                  fetchFilterData?.map((item) => item.type?.trim())
                 ),
               ]
                 .filter(Boolean)
-                .map((type, index) => (
+                ?.map((type, index) => (
                   <SelectItem key={index} value={type}>
                     {type.charAt(0).toUpperCase() + type.slice(1)}
                   </SelectItem>

@@ -86,7 +86,7 @@ const Index = () => {
         .select("*");
       console.log("hotel Data", hotels);
 
-      const updatedJson = hotels.map((hotel) => {
+      const updatedJson = hotels?.map((hotel) => {
         return {
           id: hotel.id,
           name: hotel.stay_name,
@@ -142,7 +142,7 @@ const Index = () => {
         const clean = priceStr.replace(/[^\d\-]/g, "");
     
         if (clean.includes("-")) {
-          const [min] = clean.split("-").map(Number);
+          const [min] = clean?.split("-")?.map(Number);
           return min || Infinity;
         }
     
@@ -215,12 +215,12 @@ const Index = () => {
               All quiet finds
             </h3>
             <p className="text-stone-600 text-lg font-light">
-              {filteredDestinations.length} carefully curated stays
+              {/* {filteredDestinations?.length} carefully curated stays */}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredDestinations.map((destination) => (
+            {filteredDestinations?.map((destination) => (
               <DestinationCard key={destination.id} destination={destination} />
             ))}
           </div>
